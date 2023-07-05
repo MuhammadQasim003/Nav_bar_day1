@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/nav_barr.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel = "icon" href = "Untitled.png" type = "image/x-icon">
+  <title>Nav_BAR_try</title>
+</head>
+<body>
+  <header>
+    <!-- nav bar menu-->
+    <div class="container">
+      <div class="logo" ><a href="#">Nav Bar</a></div>
+      <ul class="nav_links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About </a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Extra</a></li>
+      </ul>
+      <a href="#" class="action_btn">Get Started</a>
+      <div class="toggle_btn">
+        <i class="fa-sharp fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <!-- Drop dwon menu-->
+
+    <div class="drop_d_menu ">
+      <li><a href="#">Home</a></li>
+        <li><a href="#">About </a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Extra</a></li>
+        <li><a href="#" class="action_btn">Get Started</a></li>
+    </div>
+  </header>
+      <!-- script to create onclick listenser for drop dwon button-->
+  <script>
+    const toggleBtn = document.querySelector(".toggle_btn")
+    const toggleBtnIcon = document.querySelector(".toggle_btn i")
+    const drop_down_menu = document.querySelector(".drop_d_menu")
+    toggleBtn.onclick= function (){
+        drop_down_menu.classList.toggle('open')
+        const isOpen = drop_down_menu.classList.contains('open')
+        toggleBtnIcon.classList = isOpen 
+        ?'fa-solid fa-xmarks'
+        : 'fa-sharp fa-solid fa-bars'
+    }
+  </script>
+</body>
+</html>
